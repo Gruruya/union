@@ -28,6 +28,9 @@ jobs:
           path: nim
           version: ${{ matrix.branch }}
 
+      - name: Install dependencies
+        run: nimble install -y --depsOnly
+
       - name: Run tests
         run: nimble test -y
 

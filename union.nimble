@@ -13,6 +13,7 @@ when compiles(taskRequires):
   taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
+  before test: exec "nimble install -y --depsOnly"
 
 task test, "Run test suite":
   when defined(windows):

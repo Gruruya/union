@@ -9,7 +9,7 @@ license       = "MIT"
 
 requires "nim >= 1.5.1"
 
-when compiles(taskRequires):
+when declared(taskRequires):
   taskRequires "test", "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
 else:
   requires "https://github.com/disruptek/balls >= 3.0.0 & < 4.0.0"
